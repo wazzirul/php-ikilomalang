@@ -1,0 +1,353 @@
+*{
+	margin: 0;padding: 0;font-family: comic sans ms;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+body{
+	background: url(../img/floral1.png);
+}
+#to-top{
+	display: none;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	border: 30px;
+	border: 3px solid #000;
+	z-index: 10;	
+	border-radius: 10px;
+}
+#to-top img{
+	width: 50px;
+	height: 50px;
+}
+.box{
+	height: 100%;
+	position: fixed;
+	width: 210px;
+	left: -236px;
+	background: #1E90FF;
+	z-index: 10;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+}
+.nav{
+	position: absolute;
+	right: -60px;
+	background: #1E90FF;
+	cursor: pointer;
+	top: 50px;
+	transform: rotate(-90deg);
+	padding: 5px 20px;
+	width: 50px;
+	height: 20px;
+	border-radius: 0 0 10px 10px;
+}
+.menu{
+	width: 210px;
+	overflow: hidden;
+	height: 100%;
+}
+.menu img{
+	margin: 1% 0;
+	width: 100%;
+	height: 20%;
+}
+.nav-ul ul{
+display: none;
+}
+li.tap ul{
+	display: block;
+}
+.nav-box a{
+	display: block;
+	cursor: pointer;
+	padding: 10px 20px;
+	background: #1C86EE;
+	border: 1px solid white;
+	border-collapse: collapse;
+	color: white;
+}
+.nav-li .arrow:after{
+	content: '\203A';
+	float: right;
+	transform: rotate(90deg);
+}
+li.tap .arrow:after{
+	content: '\2039';
+}
+li.tap ul li a:before{
+	content: '\203A';
+	margin: 0 5px 0 0;
+}
+#slider{
+	overflow: hidden;
+}
+#slider figure img{
+	width: 20%;
+	float: left;
+}
+#slider figure{
+	width: 500%;
+	animation: slidy 30s infinite;
+	position: relative;
+	left: 0;
+}
+#slider img{
+	height: 663px;
+}
+@keyframes slidy{
+	0%{left:-0%;}
+	20%{left:-0%;}
+	25%{left:-100%;}
+	45%{left:-100%;}
+	50%{left:-200%;}
+	70%{left:-200%;}
+	75%{left:-300%;}
+	95%{left:-300%;}
+	100%{left:-400%;}
+}
+#slider .inside{
+	z-index: 2;
+	position: absolute;
+	text-align: center;
+	top: 470px;
+	width: 90%;
+	padding: 30px 5%;
+	color: white;
+	background: rgba(0,0,0,0.5);
+}
+#wisata{
+	width: 100%;
+	text-align: center;
+
+	margin-bottom: 1%;
+	text-transform: uppercase;
+}
+#wisata h1{
+	margin: 3% 0;
+}
+.tw-box{
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+.tw-box:after,.tw-item:before{
+	display: table;content: '';
+}
+.tw-box:after{
+	clear: both;
+}
+.tw-item{
+	overflow: hidden;
+	width: 300px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	cursor: pointer;
+	display: inline-block;
+	margin: 20px 10px 70px 10px;
+}
+.tw-item img{
+	width: 300px;
+	height: 200px;
+	transition: all ease-in-out 0.4s;
+}
+.img-wrap{
+	overflow: hidden;
+}
+.tw-item:hover img{
+	transform: scale(2) rotate(20deg);
+}
+.tw-item p{
+	width: 300px;
+	padding: 15px 0;
+	background: white;
+}
+.tw-item a{
+	color: black;
+}
+.alam{
+	border-bottom: 5px solid #cc3333;
+}
+.tw-item:hover .alam{
+	background: #cc3333;
+}
+.buatan{
+	border-bottom: 5px solid #0bd30b;
+}
+.tw-item:hover .buatan{
+	background: #0bd30b;
+}
+.sejarah{
+	border-bottom: 5px solid #fcdb47;
+}
+.tw-item:hover .sejarah{
+	background: #fcdb47;
+}
+.kuliner{
+	border-bottom: 5px solid #3366ff;
+}
+.tw-item:hover .kuliner{
+	background: #3366ff;
+}
+
+#fasilitas{
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1%;
+}
+#fasilitas h1{
+	margin: 3% 0;
+}
+.tf-box{
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.tf-box:after,.tf-item:before{
+	display: table;content: '';
+}
+.tf-box:after{
+	clear: both;
+}
+.tf-box li{
+	width: 220px;
+	height: 220px;
+	display: inline-block;
+	cursor: pointer;
+	margin: 20px;
+}
+.tf-item{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border:1px solid transparent;
+	position: relative;
+	transition: all ease-in-out 0.4s;
+	box-shadow: inset 0 0 0 16px rgba(50,50,50,0.3);
+}
+.tf-info{
+	opacity: 0;
+	transform: scale(0);
+	transition: all ease-in-out 0.4s;
+	border-radius: 50%;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	background: rgba(50,50,50,0.6); 
+}
+.tf-item:hover .tf-info{
+	opacity: 1;
+	transform: scale(1);
+}
+.tf-item:hover{
+	border:1px solid transparent;
+}
+.tf-info h3{
+	padding: 80px 0 0 0;
+	font-size: 25px;
+}
+.tf-info a{
+	color: white;
+}
+.tf-img1{
+	background: url(../img/lcook.jpg);
+}
+.tf-img2{
+	background: url(../img/car.png)
+}
+.tf-img3{
+	background: url(../img/comp.png);
+}
+.tf-img4{
+	background: url(../img/hotel.png);
+}
+.tf-img5{
+	background: url(../img/imoney.png);
+}
+
+#footer{
+	background: #000;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+#footer h4{
+	padding: 15px 0;
+}
+.menufoot{
+	overflow: hidden;
+	width: 100%;
+	margin-top: 1%;
+	background: #242424;
+	padding: 1% 3%;
+}
+
+.bukutamu{
+	width: 30%;
+}
+.bukutamu table td{
+	vertical-align: top;
+	padding: 10px 0;
+}
+.bukutamu table input[type='text']{
+	width: 128%;
+	padding: 5px 1%;
+	border-radius: 5px;
+}
+.bukutamu table textarea{
+	width: 128%;
+	padding: 5px 1%;
+	border-radius: 5px;
+	height: 70px;
+}
+.bukutamu table input[type='submit']{
+	padding: 10px 20px;
+	display: block;
+	margin: 0 auto;
+	border:2px solid transparent;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.bukutamu table input[type='submit']:hover{
+	background: #242424;
+	border:2px solid #fff;
+}
+.menufoot h2{
+	padding-bottom: 5px;
+	border-bottom: 3px solid #fff;
+	margin-bottom: 10px;
+}
+.menufoot td{
+	vertical-align: top;
+	display: inline-block;
+	padding:0 1%;
+}
+.navigasi{
+	width: 15%;
+}
+.navigasi a{
+	color: #fff;
+}
+.kontakkami{
+	width: 40%;
+	text-align: left;
+}
+.kontakkami h2{
+	text-align: center;
+}
+#pencarian{
+	display: block;
+	margin: 10px 0;
+}
+#pencarian input[type='text']{
+	width: 206px;
+	padding: 5px 0;
+	font-size: 15px;
+
+}
